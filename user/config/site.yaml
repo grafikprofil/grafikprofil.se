@@ -1,0 +1,33 @@
+title: 'Grafik & Profil'
+default_lang: sv
+author:
+  name: 'Per Olsson'
+  email: per@grafikprofil.se
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: Vi hjälper både dig och din hemsida.
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+blog:
+  route: /blog
+header:
+  title:  <span>VI HJÄLPER BÅDE</span> DIG OCH DIN HEMSIDA
+  description: 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga något nytt. Vi gör, guidar eller pekar dig åt rätt håll. Att ha en webb behöver inte vara mer komplicerat än så.'
+  buttons:
+    -
+      text: 'Hjälp mig!'
+      link: '#help_me'
+      class: help-me-btn
+footer:
+  links:
+    -
+      text: 'Hej kompis!'
+      url: 'http://hejkomp.is'
+    -
+      text: Vi <i class="fa fa-heart" aria-hidden="true"></i> kakor
+      url: '#'

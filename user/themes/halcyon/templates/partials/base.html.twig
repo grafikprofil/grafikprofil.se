@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="{{ grav.language.getLanguage ?: 'en' }}">
+<head>
+	{% block head %}
+		<meta charset="utf-8" />
+		<title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+		{% include 'partials/metadata.html.twig' %}
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-TXGNS9X');</script>
+		<!-- End Google Tag Manager -->
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-99821474-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+
+		<script src="https://use.typekit.net/dst8yoy.js"></script>
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		
+		<link href="https://fonts.googleapis.com/css?family=Varela+Round&amp;subset=latin-ext" rel="stylesheet">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ url('theme://img/apple-touch-icon.png') }}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ url('theme://img/favicon-32x32.png') }}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ url('theme://img/favicon-16x16.png') }}">
+		<link rel="mask-icon" href="{{ url('theme://img/safari-pinned-tab.svg') }}" color="#5bbad5">
+		<meta name="theme-color" content="#ffffff">
+
+		 {% block stylesheets %}
+				{% do assets.addCss('theme://css/bootstrap.min.css') %}
+				{% do assets.addCss('theme://css/jquery.fancybox.css') %}
+				{% do assets.addCss('theme://css/flexslider.css') %}
+				{% do assets.addCss('theme://css/styles.css') %}
+				{% do assets.addCss('theme://css/queries.css') %}
+				{% do assets.addCss('theme://css/animate.css') %}
+				{% do assets.addCss('theme://css/custom.css') %}
+		{% endblock %}
+		{{ assets.css() }}
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+		{% endblock %}
+	</head>
+	<body id="top">
+
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXGNS9X"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		
+		{% block header %}
+			 {% include 'partials/header.html.twig' %}
+		{% endblock %}
+
+		{% block body %}
+			{% block content %}{% endblock %}
+		{% endblock %}
+
+		{% block footer %}
+			 {% include 'partials/footer.html.twig' %}
+		{% endblock %}
+
+		{% block javascripts %}
+			{% do assets.add('jquery',101) %}
+			{% do assets.addJs('theme://js/waypoints.min.js') %}
+			{% do assets.addJs('theme://js/bootstrap.min.js') %}
+			{% do assets.addJs('theme://js/scripts.js') %}
+			{% do assets.addJs('theme://js/jquery.flexslider.js') %}
+			{% do assets.addJs('theme://js/modernizr.js') %}
+			{% do assets.addJs('theme://js/custom.min.js') %}
+		{% endblock %}
+		{{ assets.js() }}
+	</body>
+</html>

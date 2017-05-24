@@ -1,0 +1,11 @@
+enabled: true
+sequence:
+  - geoplugin
+  - freegeoip
+  - ipinfo
+  - dbip # API key required
+
+keys:
+   dbip: "FAKEKEY"
+
+test_ip: null

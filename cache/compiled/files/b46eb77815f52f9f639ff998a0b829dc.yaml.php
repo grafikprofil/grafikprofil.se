@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/public/user/config/site.yaml',
-    'modified' => 1495574967,
+    'modified' => 1495652851,
     'data' => [
         'title' => 'Grafik & Profil',
         'default_lang' => 'sv',
@@ -32,7 +32,7 @@ return [
             'buttons' => [
                 0 => [
                     'text' => 'Hjälp mig!',
-                    'link' => '#help_me',
+                    'link' => '#kontakta_oss',
                     'class' => 'help-me-btn'
                 ]
             ]

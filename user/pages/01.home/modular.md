@@ -8,9 +8,7 @@ content:
         custom:
             - _intro
             - _features
-            - _swag
             - _services
-            - _subscribe
             - _contact
 menu: Hem
 onpage_menu: true

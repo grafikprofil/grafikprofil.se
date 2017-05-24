@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1495574974,
-    'checksum' => '9c28f841557c1ca75221ed20b757f9d9',
+    'timestamp' => 1495652856,
+    'checksum' => '02b32260b289308872c7ac49c342fe3f',
     'files' => [
         'user/config' => [
             'media' => [
@@ -23,7 +23,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1495574967
+                'modified' => 1495652851
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -549,7 +549,7 @@ return [
                 'buttons' => [
                     0 => [
                         'text' => 'Hjälp mig!',
-                        'link' => '#help_me',
+                        'link' => '#kontakta_oss',
                         'class' => 'help-me-btn'
                     ]
                 ]

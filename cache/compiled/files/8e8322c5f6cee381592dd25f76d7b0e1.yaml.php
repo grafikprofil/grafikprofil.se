@@ -2,24 +2,26 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/public/user/config/plugins/email.yaml',
-    'modified' => 1495571866,
+    'modified' => 1495698970,
     'data' => [
         'enabled' => true,
         'from' => 'site@grafikprofil.se',
         'from_name' => 'grafikprofil.se',
         'to' => 'per@grafikprofil.se',
         'mailer' => [
-            'engine' => 'mail',
+            'engine' => 'smtp',
             'smtp' => [
-                'server' => 'localhost',
-                'port' => 25,
-                'encryption' => 'none'
+                'server' => 'smtp01.binero.se',
+                'port' => 587,
+                'encryption' => 'ssl',
+                'user' => 'per@grafikprofil.se',
+                'password' => 'Xazsqw2121'
             ],
             'sendmail' => [
                 'bin' => '/usr/sbin/sendmail'
             ]
         ],
         'content_type' => 'text/html',
-        'debug' => false
+        'debug' => true
     ]
 ];

@@ -216,7 +216,7 @@ class __TwigTemplate_50f8c8bf15936750eb9c834c801986de3dd509a98749ee715ec9e2c48b8
     {
         // line 81
         echo "\t\t\t";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "add", array(0 => "jquery", 1 => 101), "method");
+        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "jquery", 1 => 101), "method");
         // line 82
         echo "\t\t\t";
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/waypoints.min.js"), "method");
@@ -234,7 +234,7 @@ class __TwigTemplate_50f8c8bf15936750eb9c834c801986de3dd509a98749ee715ec9e2c48b8
         $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/modernizr.js"), "method");
         // line 87
         echo "\t\t\t";
-        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/custom.min.js"), "method");
+        $this->getAttribute((isset($context["assets"]) ? $context["assets"] : null), "addJs", array(0 => "theme://js/scripts.min.js"), "method");
         // line 88
         echo "\t\t";
     }
@@ -344,13 +344,13 @@ class __TwigTemplate_50f8c8bf15936750eb9c834c801986de3dd509a98749ee715ec9e2c48b8
 \t\t{% endblock %}
 
 \t\t{% block javascripts %}
-\t\t\t{% do assets.add('jquery',101) %}
+\t\t\t{% do assets.addJs('jquery',101) %}
 \t\t\t{% do assets.addJs('theme://js/waypoints.min.js') %}
 \t\t\t{% do assets.addJs('theme://js/bootstrap.min.js') %}
 \t\t\t{% do assets.addJs('theme://js/scripts.js') %}
 \t\t\t{% do assets.addJs('theme://js/jquery.flexslider.js') %}
 \t\t\t{% do assets.addJs('theme://js/modernizr.js') %}
-\t\t\t{% do assets.addJs('theme://js/custom.min.js') %}
+\t\t\t{% do assets.addJs('theme://js/scripts.min.js') %}
 \t\t{% endblock %}
 \t\t{{ assets.js() }}
 \t</body>

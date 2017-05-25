@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1495652856,
-    'checksum' => '02b32260b289308872c7ac49c342fe3f',
+    'timestamp' => 1495699069,
+    'checksum' => 'b8292adb61ae85c7aae75ee988b01bab',
     'files' => [
         'user/config' => [
             'media' => [
@@ -11,11 +11,19 @@ return [
             ],
             'plugins/cookiespolicy' => [
                 'file' => 'user/config/plugins/cookiespolicy.yaml',
-                'modified' => 1495573056
+                'modified' => 1495654654
             ],
             'plugins/email' => [
                 'file' => 'user/config/plugins/email.yaml',
-                'modified' => 1495571866
+                'modified' => 1495698970
+            ],
+            'plugins/form' => [
+                'file' => 'user/config/plugins/form.yaml',
+                'modified' => 1495654633
+            ],
+            'plugins/form-database' => [
+                'file' => 'user/config/plugins/form-database.yaml',
+                'modified' => 1495698868
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
@@ -23,7 +31,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1495652851
+                'modified' => 1495699035
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -157,20 +165,20 @@ return [
                 'to' => 'per@grafikprofil.se',
                 'to_name' => NULL,
                 'mailer' => [
-                    'engine' => 'mail',
+                    'engine' => 'smtp',
                     'smtp' => [
-                        'server' => 'localhost',
-                        'port' => 25,
-                        'encryption' => 'none',
-                        'user' => '',
-                        'password' => ''
+                        'server' => 'smtp01.binero.se',
+                        'port' => 587,
+                        'encryption' => 'ssl',
+                        'user' => 'per@grafikprofil.se',
+                        'password' => 'Xazsqw2121'
                     ],
                     'sendmail' => [
                         'bin' => '/usr/sbin/sendmail'
                     ]
                 ],
                 'content_type' => 'text/html',
-                'debug' => false
+                'debug' => true
             ],
             'error' => [
                 'enabled' => true,
@@ -194,7 +202,7 @@ return [
                 ]
             ],
             'form-database' => [
-                'enabled' => true,
+                'enabled' => false,
                 'mysql_server' => 'vkazu.ch'
             ],
             'iplocate' => [
@@ -549,7 +557,7 @@ return [
                 'buttons' => [
                     0 => [
                         'text' => 'Hjälp mig!',
-                        'link' => '#kontakta_oss',
+                        'link' => '#contact_me',
                         'class' => 'help-me-btn'
                     ]
                 ]

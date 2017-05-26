@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1495790805,
-    'checksum' => 'df8a841fe92367553cff83909491b144',
+    'timestamp' => 1495791440,
+    'checksum' => '2e439f897020ff683158a8786272550f',
     'files' => [
         'user/config' => [
             'media' => [
@@ -31,7 +31,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1495790773
+                'modified' => 1495791438
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -538,7 +538,7 @@ return [
                 1 => 'tag'
             ],
             'metadata' => [
-                'description' => 'Vi hjälper både dig och din hemsida.'
+                'description' => 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga något nytt. Vi gör, guidar eller pekar dig åt rätt håll. Att ha en webb behöver inte vara mer komplicerat än så.'
             ],
             'summary' => [
                 'enabled' => true,

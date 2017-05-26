@@ -7,7 +7,7 @@ taxonomies:
   - category
   - tag
 metadata:
-  description: Vi hjälper både dig och din hemsida.
+  description: 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga något nytt. Vi gör, guidar eller pekar dig åt rätt håll. Att ha en webb behöver inte vara mer komplicerat än så.'
 summary:
   enabled: true
   format: short
@@ -16,7 +16,7 @@ summary:
 blog:
   route: /blog
 header:
-  title:  <span>VI HJÄLPER BÅDE</span> DIG OCH DIN HEMSIDA
+  title: '<span>VI HJÄLPER BÅDE</span> DIG OCH DIN HEMSIDA'
   description: 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga något nytt. Vi gör, guidar eller pekar dig åt rätt håll. Att ha en webb behöver inte vara mer komplicerat än så.'
   buttons:
     -
@@ -29,5 +29,5 @@ footer:
       text: 'Hej kompis!'
       url: 'http://hejkomp.is'
     -
-      text: Vi <i class="fa fa-heart" aria-hidden="true"></i> kakor
+      text: 'Vi <i class="fa fa-heart" aria-hidden="true"></i> kakor'
       url: '#'

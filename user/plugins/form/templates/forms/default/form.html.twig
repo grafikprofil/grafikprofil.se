@@ -4,9 +4,9 @@
 
 {% if form.message %}
     {% if form.inline_errors and form.messages %}
-        <div class="alert notices {{ form.message_color ?: 'green' }}"><p>{{ "FORM.VALIDATION_FAIL"|t|raw }}</p></div>
+        <div class="alert alert-warning notices {{ form.message_color ?: 'green' }}"><p>{{ "FORM.VALIDATION_FAIL"|t|raw }}</p></div>
     {% else %}
-        <div class="alert notices {{ form.message_color ?: 'green' }}"><p>{{ form.message|raw }}</p></div>
+        <div class="alert alert-success notices {{ form.message_color ?: 'green' }}"><p>{{ form.message|raw }}</p></div>
     {% endif %}
 {% endif %}
 {% set scope = scope ?: 'data.' %}

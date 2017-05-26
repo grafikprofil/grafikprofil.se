@@ -16,16 +16,21 @@ class __TwigTemplate_d077417dc7bceadebfb69d74db1636d2731118fcdb6d2f085e5c0d38c13
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "<section class=\"subscribe text-center\" id=\"help_me\">
+        echo "<section class=\"subscribe section-padding\" id=\"help_me\">
   <div class=\"container\">
-    <h1><i class=\"fa fa-paper-plane\"></i><span>";
-        // line 3
+  \t<div class=\"row\">
+  \t\t<div class=\"col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3\">
+    \t\t<h1 class=\"text-center\"><i class=\"fa fa-paper-plane\"></i><span>";
+        // line 5
         echo $this->getAttribute($this->getAttribute((isset($context["page"]) ? $context["page"] : null), "header", array()), "title", array());
         echo "</span></h1>
-    ";
-        // line 4
+    \t\t";
+        // line 6
         echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
         echo "
+    \t\t<div id=\"short-contact-form-result\" class=\"hidden\"></div>
+    \t</div>
+    </div>
   </div>
 </section>
 ";
@@ -43,7 +48,7 @@ class __TwigTemplate_d077417dc7bceadebfb69d74db1636d2731118fcdb6d2f085e5c0d38c13
 
     public function getDebugInfo()
     {
-        return array (  27 => 4,  23 => 3,  19 => 1,);
+        return array (  29 => 6,  25 => 5,  19 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -56,10 +61,15 @@ class __TwigTemplate_d077417dc7bceadebfb69d74db1636d2731118fcdb6d2f085e5c0d38c13
 
     public function getSourceContext()
     {
-        return new Twig_Source("<section class=\"subscribe text-center\" id=\"help_me\">
+        return new Twig_Source("<section class=\"subscribe section-padding\" id=\"help_me\">
   <div class=\"container\">
-    <h1><i class=\"fa fa-paper-plane\"></i><span>{{ page.header.title }}</span></h1>
-    {{ page.content }}
+  \t<div class=\"row\">
+  \t\t<div class=\"col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3\">
+    \t\t<h1 class=\"text-center\"><i class=\"fa fa-paper-plane\"></i><span>{{ page.header.title }}</span></h1>
+    \t\t{{ page.content }}
+    \t\t<div id=\"short-contact-form-result\" class=\"hidden\"></div>
+    \t</div>
+    </div>
   </div>
 </section>
 ", "modular/subscribe.html.twig", "/var/www/public/user/themes/halcyon/templates/modular/subscribe.html.twig");

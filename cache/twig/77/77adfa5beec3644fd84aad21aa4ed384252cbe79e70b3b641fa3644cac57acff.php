@@ -36,7 +36,7 @@ class __TwigTemplate_a0c67788a247fef72bf628639c419a8b56f1bbead46d72106c35ddeb827
             echo "    ";
             if (($this->getAttribute((isset($context["form"]) ? $context["form"] : null), "inline_errors", array()) && $this->getAttribute((isset($context["form"]) ? $context["form"] : null), "messages", array()))) {
                 // line 7
-                echo "        <div class=\"alert notices ";
+                echo "        <div class=\"alert alert-warning notices ";
                 echo (($this->getAttribute((isset($context["form"]) ? $context["form"] : null), "message_color", array())) ? ($this->getAttribute((isset($context["form"]) ? $context["form"] : null), "message_color", array())) : ("green"));
                 echo "\"><p>";
                 echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->translate("FORM.VALIDATION_FAIL");
@@ -44,7 +44,7 @@ class __TwigTemplate_a0c67788a247fef72bf628639c419a8b56f1bbead46d72106c35ddeb827
     ";
             } else {
                 // line 9
-                echo "        <div class=\"alert notices ";
+                echo "        <div class=\"alert alert-success notices ";
                 echo (($this->getAttribute((isset($context["form"]) ? $context["form"] : null), "message_color", array())) ? ($this->getAttribute((isset($context["form"]) ? $context["form"] : null), "message_color", array())) : ("green"));
                 echo "\"><p>";
                 echo $this->getAttribute((isset($context["form"]) ? $context["form"] : null), "message", array());
@@ -225,7 +225,7 @@ class __TwigTemplate_a0c67788a247fef72bf628639c419a8b56f1bbead46d72106c35ddeb827
             if ($this->getAttribute($context["button"], "url", array())) {
                 // line 58
                 echo "              <a href=\"";
-                echo (((is_string($__internal_d85aacdae9d2ad3331d4fa5060f4c0a1998325ef08d47d45e426fc767434d5b9 = $this->getAttribute($context["button"], "url", array())) && is_string($__internal_99effb0afd2e21ed6f039a81a41c726950076d94497ac0983924e098e08421ae = "http") && ('' === $__internal_99effb0afd2e21ed6f039a81a41c726950076d94497ac0983924e098e08421ae || 0 === strpos($__internal_d85aacdae9d2ad3331d4fa5060f4c0a1998325ef08d47d45e426fc767434d5b9, $__internal_99effb0afd2e21ed6f039a81a41c726950076d94497ac0983924e098e08421ae)))) ? ($this->getAttribute($context["button"], "url", array())) : ($this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc($this->getAttribute($context["button"], "url", array()))));
+                echo (((is_string($__internal_fea106319c5afecf78bc1a93e9faa19bef84e073d4a346d1022d7aa0c0d222e0 = $this->getAttribute($context["button"], "url", array())) && is_string($__internal_af96d544820554277ef683ebcad14bc04338566ed1b370b16742955f299158d0 = "http") && ('' === $__internal_af96d544820554277ef683ebcad14bc04338566ed1b370b16742955f299158d0 || 0 === strpos($__internal_fea106319c5afecf78bc1a93e9faa19bef84e073d4a346d1022d7aa0c0d222e0, $__internal_af96d544820554277ef683ebcad14bc04338566ed1b370b16742955f299158d0)))) ? ($this->getAttribute($context["button"], "url", array())) : ($this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc($this->getAttribute($context["button"], "url", array()))));
                 echo "\">
           ";
             }
@@ -391,9 +391,9 @@ class __TwigTemplate_a0c67788a247fef72bf628639c419a8b56f1bbead46d72106c35ddeb827
 
 {% if form.message %}
     {% if form.inline_errors and form.messages %}
-        <div class=\"alert notices {{ form.message_color ?: 'green' }}\"><p>{{ \"FORM.VALIDATION_FAIL\"|t|raw }}</p></div>
+        <div class=\"alert alert-warning notices {{ form.message_color ?: 'green' }}\"><p>{{ \"FORM.VALIDATION_FAIL\"|t|raw }}</p></div>
     {% else %}
-        <div class=\"alert notices {{ form.message_color ?: 'green' }}\"><p>{{ form.message|raw }}</p></div>
+        <div class=\"alert alert-success notices {{ form.message_color ?: 'green' }}\"><p>{{ form.message|raw }}</p></div>
     {% endif %}
 {% endif %}
 {% set scope = scope ?: 'data.' %}

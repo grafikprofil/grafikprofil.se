@@ -21,7 +21,7 @@ header:
   buttons:
     -
       text: 'Hjälp mig!'
-      link: '#kontakta_oss'
+      link: '#help_me'
       class: help-me-btn
 footer:
   links:

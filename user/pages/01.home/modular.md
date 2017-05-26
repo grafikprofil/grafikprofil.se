@@ -9,6 +9,7 @@ content:
             - _intro
             - _features
             - _services
+            - _subscribe
             - _contact
 menu: Hem
 onpage_menu: true

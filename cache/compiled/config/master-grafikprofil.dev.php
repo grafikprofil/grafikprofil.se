@@ -1,17 +1,21 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1495963065,
-    'checksum' => '7a4b911b68fa8e1e0a41d0d58f2e43e6',
+    'timestamp' => 1495987532,
+    'checksum' => 'ff8c21c11bfb97cc839be662e3a95149',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
                 'modified' => 1495353366
             ],
+            'plugins/cdn' => [
+                'file' => 'user/config/plugins/cdn.yaml',
+                'modified' => 1495987523
+            ],
             'plugins/cookiespolicy' => [
                 'file' => 'user/config/plugins/cookiespolicy.yaml',
-                'modified' => 1495654654
+                'modified' => 1495987531
             ],
             'plugins/email' => [
                 'file' => 'user/config/plugins/email.yaml',
@@ -24,6 +28,10 @@ return [
             'plugins/form-database' => [
                 'file' => 'user/config/plugins/form-database.yaml',
                 'modified' => 1495698868
+            ],
+            'plugins/seo' => [
+                'file' => 'user/config/plugins/seo.yaml',
+                'modified' => 1495986628
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
@@ -39,7 +47,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1495572998
+                'modified' => 1495987265
             ]
         ],
         'system/config' => [
@@ -64,6 +72,10 @@ return [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
                 'modified' => 1495353306
+            ],
+            'plugins/cdn' => [
+                'file' => 'user/plugins/cdn/cdn.yaml',
+                'modified' => 1495987265
             ],
             'plugins/cookiespolicy' => [
                 'file' => 'user/plugins/cookiespolicy/cookiespolicy.yaml',
@@ -96,6 +108,10 @@ return [
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
                 'modified' => 1495571173
+            ],
+            'plugins/seo' => [
+                'file' => 'user/plugins/seo/seo.yaml',
+                'modified' => 1495986610
             ]
         ]
     ],
@@ -153,8 +169,19 @@ return [
                     ]
                 ]
             ],
+            'cdn' => [
+                'enabled' => false,
+                'inline_css_replace' => true,
+                'pullzone' => 'yourdomain.cdn.com',
+                'tags' => 'a|link|img|script',
+                'tag_attributes' => 'href|src',
+                'extensions' => 'jpe?g|png|gif|ttf|otf|svg|woff|xml|js|css',
+                'valid_formats' => [
+                    0 => 'html'
+                ]
+            ],
             'cookiespolicy' => [
-                'enabled' => true,
+                'enabled' => false,
                 'type' => 'bar',
                 'url' => 'http://grafikprofil.se/kakor'
             ],
@@ -266,6 +293,9 @@ return [
             'problems' => [
                 'enabled' => true,
                 'built_in_css' => true
+            ],
+            'seo' => [
+                'enabled' => false
             ]
         ],
         'media' => [

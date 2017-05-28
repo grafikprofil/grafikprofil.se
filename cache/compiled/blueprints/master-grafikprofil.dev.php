@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1495963065,
-    'checksum' => '1f0872f41b77b8320f751e660cfe5f0b',
+    'timestamp' => 1495987277,
+    'checksum' => 'edf9e521824c95ab11a42fbd842e59bf',
     'files' => [
         'system/blueprints/config' => [
             'media' => [
@@ -26,6 +26,10 @@ return [
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/blueprints.yaml',
                 'modified' => 1495353306
+            ],
+            'plugins/cdn' => [
+                'file' => 'user/plugins/cdn/blueprints.yaml',
+                'modified' => 1495987265
             ],
             'plugins/cookiespolicy' => [
                 'file' => 'user/plugins/cookiespolicy/blueprints.yaml',
@@ -58,6 +62,10 @@ return [
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
                 'modified' => 1495571173
+            ],
+            'plugins/seo' => [
+                'file' => 'user/plugins/seo/blueprints.yaml',
+                'modified' => 1495986610
             ]
         ]
     ],
@@ -2169,6 +2177,78 @@ return [
                 'name' => 'plugins.admin.popularity.history.visitors',
                 'validation' => 'loose'
             ],
+            'plugins.cdn' => [
+                'form' => [
+                    'validation' => 'strict'
+                ],
+                'type' => '_root',
+                'form_field' => false
+            ],
+            'plugins.cdn.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin Status',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.cdn.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.cdn.pullzone' => [
+                'type' => 'text',
+                'label' => 'CDN Domain',
+                'default' => 'yourdomain.cdn.com',
+                'name' => 'plugins.cdn.pullzone',
+                'validation' => 'strict'
+            ],
+            'plugins.cdn.tags' => [
+                'type' => 'text',
+                'label' => 'Tags',
+                'default' => 'a|link|img|script',
+                'name' => 'plugins.cdn.tags',
+                'validation' => 'strict'
+            ],
+            'plugins.cdn.tag_attributes' => [
+                'type' => 'text',
+                'label' => 'Tag Attributes',
+                'default' => 'href|src',
+                'name' => 'plugins.cdn.tag_attributes',
+                'validation' => 'strict'
+            ],
+            'plugins.cdn.inline_css_replace' => [
+                'type' => 'toggle',
+                'label' => 'Inline CSS Replace',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.cdn.inline_css_replace',
+                'validation' => 'strict'
+            ],
+            'plugins.cdn.extensions' => [
+                'type' => 'text',
+                'label' => 'Extensions',
+                'default' => 'jpe?g|png|gif|ttf|otf|svg|woff|xml|js|css',
+                'name' => 'plugins.cdn.extensions',
+                'validation' => 'strict'
+            ],
+            'plugins.cdn.valid_formats' => [
+                'type' => 'text',
+                'label' => 'Valid Formats',
+                'default' => 'html',
+                'name' => 'plugins.cdn.valid_formats',
+                'validation' => 'strict'
+            ],
             'plugins.cookiespolicy' => [
                 'form' => [
                     'validation' => 'strict'
@@ -3081,6 +3161,171 @@ return [
                 ],
                 'name' => 'plugins.problems.built_in_css',
                 'validation' => 'strict'
+            ],
+            'plugins.seo' => [
+                'form' => [
+                    
+                ],
+                'type' => '_root',
+                'form_field' => false
+            ],
+            'plugins.seo.header' => [
+                'type' => '_parent',
+                'name' => 'plugins.seo.header',
+                'form_field' => false
+            ],
+            'plugins.seo.header.googledesc' => [
+                'type' => 'textarea',
+                'label' => 'PLUGINS.SEO.GOOGLE_DESC',
+                'id' => 'desc',
+                'name' => 'plugins.seo.header.googledesc'
+            ],
+            'plugins.seo.header.googletitle' => [
+                'type' => 'text',
+                'label' => 'PLUGINS.SEO.GOOGLE_TITLE',
+                'id' => 'text',
+                'name' => 'plugins.seo.header.googletitle'
+            ],
+            'plugins.seo.header.googlepreview' => [
+                'type' => 'google',
+                'label' => 'PLUGINS.SEO.GOOGLE_PREVIEWDESC',
+                'name' => 'plugins.seo.header.googlepreview'
+            ],
+            'plugins.seo.googlefields' => [
+                'type' => 'tab',
+                'name' => 'plugins.seo.googlefields'
+            ],
+            'plugins.seo.twitter' => [
+                'type' => '_parent',
+                'name' => 'plugins.seo.twitter',
+                'form_field' => false
+            ],
+            'plugins.seo.twitter.twitterenable' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADMIN.ENABLED',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.seo.twitter.twitterenable'
+            ],
+            'plugins.seo.header.twittercardoptions' => [
+                'type' => 'select',
+                'label' => 'PLUGINS.SEO.TWITTER_CARD_SELECT',
+                'options' => [
+                    'summary' => 'PLUGINS.SEO.TWITTER_CARD_SUMMARY',
+                    'summary_large_image' => 'PLUGINS.SEO.TWITTER_CARD_SUMLARGIMG'
+                ],
+                'name' => 'plugins.seo.header.twittercardoptions'
+            ],
+            'plugins.seo.header.titlecardtwitter' => [
+                'type' => 'section',
+                'underline' => true,
+                'id' => 'twittimgselect',
+                'name' => 'plugins.seo.header.titlecardtwitter'
+            ],
+            'plugins.seo.header.twittertitle' => [
+                'type' => 'text',
+                'label' => 'PLUGINS.SEO.TWITTER_TITLE',
+                'id' => 'twittertitle',
+                'name' => 'plugins.seo.header.twittertitle'
+            ],
+            'plugins.seo.header.twitterdescription' => [
+                'type' => 'textarea',
+                'text' => 'PLUGINS.SEO.TWITTER_DESCRIPTION',
+                'id' => 'twitterdescription',
+                'name' => 'plugins.seo.header.twitterdescription'
+            ],
+            'plugins.seo.column1' => [
+                'type' => 'column',
+                'name' => 'plugins.seo.column1'
+            ],
+            'plugins.seo.header.twitterlabel' => [
+                'type' => 'section',
+                'text' => 'PLUGINS.SEO.TWITTER_PREVIEWDESC',
+                'name' => 'plugins.seo.header.twitterlabel'
+            ],
+            'plugins.seo.header.twitterpreview' => [
+                'type' => 'twitter',
+                'name' => 'plugins.seo.header.twitterpreview'
+            ],
+            'plugins.seo.column2' => [
+                'type' => 'column',
+                'name' => 'plugins.seo.column2'
+            ],
+            'plugins.seo.columns' => [
+                'type' => 'columns',
+                'name' => 'plugins.seo.columns'
+            ],
+            'plugins.seo.twitterfields' => [
+                'type' => 'tab',
+                'name' => 'plugins.seo.twitterfields'
+            ],
+            'plugins.seo.header.facebookenable' => [
+                'type' => 'toggle',
+                'label' => 'PLUGINS.SEO.FACEBOOK_ENABLE',
+                'default' => 1,
+                'highlight' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.YES',
+                    0 => 'PLUGIN_ADMIN.NO'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.seo.header.facebookenable'
+            ],
+            'plugins.seo.header.facebooktitle' => [
+                'type' => 'text',
+                'label' => 'PLUGINS.SEO.FACEBOOK_TITLE',
+                'id' => 'facebooktitle',
+                'name' => 'plugins.seo.header.facebooktitle'
+            ],
+            'plugins.seo.header.facebookdesc' => [
+                'type' => 'textarea',
+                'label' => 'PLUGINS.SEO.FACEBOOK_DESC',
+                'id' => 'facebookdesc',
+                'name' => 'plugins.seo.header.facebookdesc'
+            ],
+            'plugins.seo.column3' => [
+                'type' => 'column',
+                'name' => 'plugins.seo.column3'
+            ],
+            'plugins.seo.header.facebookpreview' => [
+                'type' => 'facebook',
+                'label' => 'PLUGINS.SEO.FACEBOOK_PREVIEWDESC',
+                'name' => 'plugins.seo.header.facebookpreview'
+            ],
+            'plugins.seo.column4' => [
+                'type' => 'column',
+                'name' => 'plugins.seo.column4'
+            ],
+            'plugins.seo.columns2' => [
+                'type' => 'columns',
+                'name' => 'plugins.seo.columns2'
+            ],
+            'plugins.seo.facebookfields' => [
+                'type' => 'tab',
+                'name' => 'plugins.seo.facebookfields'
+            ],
+            'plugins.seo.tabs1' => [
+                'type' => 'tabs',
+                'active' => 1,
+                'name' => 'plugins.seo.tabs1'
+            ],
+            'plugins.seo.seo' => [
+                'type' => 'tab',
+                'name' => 'plugins.seo.seo'
+            ],
+            'plugins.seo.tabs' => [
+                'type' => 'tabs',
+                'active' => 1,
+                'name' => 'plugins.seo.tabs'
             ]
         ],
         'rules' => [
@@ -3323,6 +3568,15 @@ return [
                         'days_of_stats' => 'plugins.admin.dashboard.days_of_stats'
                     ]
                 ],
+                'cdn' => [
+                    'enabled' => 'plugins.cdn.enabled',
+                    'pullzone' => 'plugins.cdn.pullzone',
+                    'tags' => 'plugins.cdn.tags',
+                    'tag_attributes' => 'plugins.cdn.tag_attributes',
+                    'inline_css_replace' => 'plugins.cdn.inline_css_replace',
+                    'extensions' => 'plugins.cdn.extensions',
+                    'valid_formats' => 'plugins.cdn.valid_formats'
+                ],
                 'cookiespolicy' => [
                     'enabled' => 'plugins.cookiespolicy.enabled',
                     'type' => 'plugins.cookiespolicy.type',
@@ -3439,6 +3693,38 @@ return [
                 'problems' => [
                     'enabled' => 'plugins.problems.enabled',
                     'built_in_css' => 'plugins.problems.built_in_css'
+                ],
+                'seo' => [
+                    'tabs' => 'plugins.seo.tabs',
+                    'seo' => 'plugins.seo.seo',
+                    'tabs1' => 'plugins.seo.tabs1',
+                    'googlefields' => 'plugins.seo.googlefields',
+                    'header' => [
+                        'googledesc' => 'plugins.seo.header.googledesc',
+                        'googletitle' => 'plugins.seo.header.googletitle',
+                        'googlepreview' => 'plugins.seo.header.googlepreview',
+                        'twittercardoptions' => 'plugins.seo.header.twittercardoptions',
+                        'titlecardtwitter' => 'plugins.seo.header.titlecardtwitter',
+                        'twittertitle' => 'plugins.seo.header.twittertitle',
+                        'twitterdescription' => 'plugins.seo.header.twitterdescription',
+                        'twitterlabel' => 'plugins.seo.header.twitterlabel',
+                        'twitterpreview' => 'plugins.seo.header.twitterpreview',
+                        'facebookenable' => 'plugins.seo.header.facebookenable',
+                        'facebooktitle' => 'plugins.seo.header.facebooktitle',
+                        'facebookdesc' => 'plugins.seo.header.facebookdesc',
+                        'facebookpreview' => 'plugins.seo.header.facebookpreview'
+                    ],
+                    'twitterfields' => 'plugins.seo.twitterfields',
+                    'columns' => 'plugins.seo.columns',
+                    'column1' => 'plugins.seo.column1',
+                    'twitter' => [
+                        'twitterenable' => 'plugins.seo.twitter.twitterenable'
+                    ],
+                    'column2' => 'plugins.seo.column2',
+                    'facebookfields' => 'plugins.seo.facebookfields',
+                    'columns2' => 'plugins.seo.columns2',
+                    'column3' => 'plugins.seo.column3',
+                    'column4' => 'plugins.seo.column4'
                 ]
             ]
         ],

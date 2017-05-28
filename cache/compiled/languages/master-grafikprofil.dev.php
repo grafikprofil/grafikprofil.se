@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledLanguages',
-    'timestamp' => 1495987279,
-    'checksum' => '16a2684f250ee0a0e7e82234c8f692e4',
+    'timestamp' => 1495987887,
+    'checksum' => '791a75ceb31f8c6f2f1b8046bdbac27a',
     'files' => [
         'system/languages' => [
             'ar' => [
@@ -119,6 +119,10 @@ return [
             ]
         ],
         'user/plugins' => [
+            'plugins/cookiesnotice' => [
+                'file' => 'user/plugins/cookiesnotice/languages.yaml',
+                'modified' => 1495987874
+            ],
             'plugins/cookiespolicy' => [
                 'file' => 'user/plugins/cookiespolicy/languages.yaml',
                 'modified' => 1495572998
@@ -970,6 +974,11 @@ return [
                 'CONTENT_PADDING_HELP' => 'Enable/Disable content padding around content area to provide more space'
             ],
             'PLUGINS' => [
+                'COOKIES_NOTICE' => [
+                    'COOKIE' => 'We use cookies to ensure that we give you the best experience on our website. We will assume that you agree for us to do this. However, you can change your settings at any time according with your browser.',
+                    'LINK' => 'Learn more',
+                    'DIMISS' => 'Close'
+                ],
                 'COOKIES_POLICY' => [
                     'MESSAGE' => 'We use cookies to help us give you the best experience when using our website. Unless you change your settings, we will assume that you agree for us to do this. However, you can change your settings at any time according with your browser.',
                     'PRIVACY' => 'Learn more',
@@ -1941,6 +1950,11 @@ Path: `%2$s`
                 'ALLOW_WEBSERVER_GZIP' => 'Autorisé Gzip WebServer'
             ],
             'PLUGINS' => [
+                'COOKIES_NOTICE' => [
+                    'COOKIE' => 'En poursuivant la navigation sur notre site web, vous consentez à ce que nous utilisions des cookies afin de vous proposer une meilleure expérience. Toutefois, vous pouvez changer vos préférences dans les options de votre navigateur.',
+                    'LINK' => 'En savoir plus',
+                    'DIMISS' => 'Fermer'
+                ],
                 'COOKIES_POLICY' => [
                     'MESSAGE' => 'En continuant à naviguer sur ce site, vous acceptez l\'utilisation des cookies afin de réaliser des statistiques d\'audiences et vous proposer des services et une offre adapés à vos centres d\'intérêts.',
                     'PRIVACY' => 'En savoir plus',
@@ -5989,6 +6003,13 @@ Sti: `%2$s`
                 'ERROR_SIMPLE' => 'Einfacher Fehler',
                 'ERROR_SYSTEM' => 'Systemfehler'
             ],
+            'PLUGINS' => [
+                'COOKIES_NOTICE' => [
+                    'COOKIE' => 'Wir verwenden Cookies, um sicherzustellen, dass wir Ihnen die beste Erfahrung auf unserer Website geben. Wir gehen davon aus, dass Sie damit einverstanden, für uns, dies zu tun. Allerdings können Sie Ihre Einstellungen jederzeit entsprechend mit Ihrem Browser ändern.',
+                    'LINK' => 'Mehr erfahren',
+                    'DIMISS' => 'Schließen'
+                ]
+            ],
             'PLUGIN_EMAIL' => [
                 'EMAIL_NOT_CONFIGURED' => 'E-Mail ist nicht konfiguriert',
                 'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Bitte konfigurieren sie eine \'An\' (\'to\') Adresse in den Email-Plugin-Einstellungen oder im Formular.',
@@ -7162,6 +7183,13 @@ Pfad: `%2$s`
                 'ALLOW_WEBSERVER_GZIP_HELP' => 'Desactivado de forma predeterminada. Cuando esté activado, Webserver-configured compresión Gzip/Deflate funcionará, pero las conexiones http no serán cerradas antes del evento onShutDown() causando una carga más lenta de la página',
                 'OFFLINE_WARNING' => 'No se puede establecer la conexión con GPM'
             ],
+            'PLUGINS' => [
+                'COOKIES_NOTICE' => [
+                    'COOKIE' => 'Utilizamos cookies para asegurarnos de que le ofrecemos la mejor experiencia en nuestro sitio web. Asumiremos que usted acepta hacer esto. Sin embargo, puede cambiar su configuración en cualquier momento en su navegador.',
+                    'LINK' => 'Leer más',
+                    'DIMISS' => 'Cerrar'
+                ]
+            ],
             'PLUGIN_EMAIL' => [
                 'PLEASE_CONFIGURE_A_TO_ADDRESS' => 'Por favor configura una dirección de \'remitente\' en la configuración del Plugin de Email o en el formulario',
                 'PLEASE_CONFIGURE_A_FROM_ADDRESS' => 'Por favor configura una dirección de \'destinatario\' en la configuración del Plugin de Email o en el formulario'
@@ -7813,6 +7841,13 @@ Ruta: `%2$s`
                 'CONTENT' => 'Sisältö',
                 'PUBLISHED' => 'Julkaistu'
             ],
+            'PLUGINS' => [
+                'COOKIES_NOTICE' => [
+                    'COOKIE' => 'Käytämme evästeitä antaaksemme parhaan kokemuksen verkkosivuillamme. Oletamme että hyväksyt tämän. Mikäli et, voit vaihtaa asetusta selaimesi asetuksista milloin vain.',
+                    'LINK' => 'Lue lisää',
+                    'DIMISS' => 'Sulje'
+                ]
+            ],
             'NICETIME' => [
                 'NO_DATE_PROVIDED' => 'Päivämäärää ei annettu',
                 'BAD_DATE' => 'Virheellinen päivämäärä',
@@ -8418,6 +8453,13 @@ Ruta: `%2$s`
                 'FILE_EXTENSION' => 'Nastavak datoteke',
                 'ALL' => 'Sve',
                 'FROM' => 'od'
+            ],
+            'PLUGINS' => [
+                'COOKIES_NOTICE' => [
+                    'COOKIE' => 'Mi koristimo kolačiće kako bismo osigurali da vam dati najbolje iskustvo na našoj web stranici. Mi ćemo pretpostaviti da ste suglasni za nas učiniti. Međutim, možete promijeniti postavke u bilo koje vrijeme u skladu s preglednikom.',
+                    'LINK' => 'Uči više',
+                    'DIMISS' => 'Zatvoriti'
+                ]
             ],
             'PLUGIN_EMAIL' => [
                 'EMAIL_NOT_CONFIGURED' => 'Email nije konfiguriran',
@@ -11740,6 +11782,13 @@ Path: `%2$s`
                 'FROM' => 'van',
                 'TO' => 'aan'
             ],
+            'PLUGINS' => [
+                'COOKIES_NOTICE' => [
+                    'COOKIE' => 'Wij gebruiken cookies om ervoor te zorgen dat wij u de beste ervaring op onze website. We nemen aan dat u akkoord gaat voor ons om dit te doen. Echter, kunt u de instellingen op elk gewenst moment veranderen al naar gelang uw browser.',
+                    'LINK' => 'Kom meer te weten',
+                    'DIMISS' => 'Sluiten'
+                ]
+            ],
             'INFLECTOR_IRREGULAR' => [
                 'person' => 'personen',
                 'man' => 'mensen',
@@ -12604,6 +12653,11 @@ Pane: \'%2$s\'
                 'GPM_METHOD' => 'Metody zdalnego pobierania'
             ],
             'PLUGINS' => [
+                'COOKIES_NOTICE' => [
+                    'COOKIE' => 'Nasza strona wykorzystuje ciasteczka by zapewnić wam najlepsze wrażenia. Domyślnie zakładamy, że wyrażasz zgodę na ich użycie. Jednak w każdej chwili możesz zmienić swoje ustawienia/preferencje zgodnie z używaną przeglądarką.',
+                    'LINK' => 'Dowiedz się więcej',
+                    'DIMISS' => 'Zamknij'
+                ],
                 'COOKIES_POLICY' => [
                     'MESSAGE' => 'Stosujemy ciasteczka  aby ułatwić Tobie korzystanie z naszego serwisu.  Pamiętaj, że w każdej chwili możesz zmienić ustawienia dotyczące cookies w ustawieniach swojej przeglądarki internetowej.',
                     'PRIVACY' => 'Dowiedz się więcej',
@@ -15485,6 +15539,13 @@ Path: `%2$s`
                 'NOTIFICATIONS' => 'Notifikationer',
                 'LEGEND' => 'Sidförklaring'
             ],
+            'PLUGINS' => [
+                'COOKIES_NOTICE' => [
+                    'COOKIE' => 'Vi använder kakor för att se till att ge dig den bästa upplevelsen på vår websida. Vi antar att du går med på detta. Du kan hur som helst ändra dina inställningar i din browswer.',
+                    'LINK' => 'Lär dig mer',
+                    'DIMISS' => 'Stäng'
+                ]
+            ],
             'FRONTMATTER_ERROR_PAGE' => '--- titel: %1$s --- # Fel: Ogiltig Frontmatter-sökväg: `%2$s` **%3$s** ``` %4$s ```',
             'NICETIME' => [
                 'NO_DATE_PROVIDED' => 'Inget datum har angivits',
@@ -17735,6 +17796,15 @@ Path: `%2$s`
                 'ERROR_MESSAGE' => '呃，似乎这个页面不存在。'
             ]
         ],
+        'dk' => [
+            'PLUGINS' => [
+                'COOKIES_NOTICE' => [
+                    'COOKIE' => 'Vi bruger cookies til at sikre, at vi giver dig den bedste oplevelse på vores hjemmeside. Vi vil antage, at du accepterer for os at gøre dette. Du kan dog ændre dine indstillinger når som helst efter med din browser.',
+                    'LINK' => 'Lær mere',
+                    'DIMISS' => 'Lukke'
+                ]
+            ]
+        ],
         'nb' => [
             'MONTHS_OF_THE_YEAR' => [
                 0 => 'januar',
@@ -17760,6 +17830,6 @@ Path: `%2$s`
                 6 => 'søndag'
             ]
         ],
-        'checksum' => '16a2684f250ee0a0e7e82234c8f692e4'
+        'checksum' => '791a75ceb31f8c6f2f1b8046bdbac27a'
     ]
 ];

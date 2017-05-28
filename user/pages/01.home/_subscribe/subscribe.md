@@ -13,7 +13,6 @@ form:
     fields:
         - name: name
           label: Ditt namn
-          autofocus: on
           autocomplete: on
           type: text
           validate:

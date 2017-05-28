@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1495987532,
-    'checksum' => 'ff8c21c11bfb97cc839be662e3a95149',
+    'timestamp' => 1495988096,
+    'checksum' => 'c8845ada6ebf824588b16b6776116ed0',
     'files' => [
         'user/config' => [
             'media' => [
@@ -12,6 +12,10 @@ return [
             'plugins/cdn' => [
                 'file' => 'user/config/plugins/cdn.yaml',
                 'modified' => 1495987523
+            ],
+            'plugins/cookiesnotice' => [
+                'file' => 'user/config/plugins/cookiesnotice.yaml',
+                'modified' => 1495988095
             ],
             'plugins/cookiespolicy' => [
                 'file' => 'user/config/plugins/cookiespolicy.yaml',
@@ -47,7 +51,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1495987265
+                'modified' => 1495987874
             ]
         ],
         'system/config' => [
@@ -76,6 +80,10 @@ return [
             'plugins/cdn' => [
                 'file' => 'user/plugins/cdn/cdn.yaml',
                 'modified' => 1495987265
+            ],
+            'plugins/cookiesnotice' => [
+                'file' => 'user/plugins/cookiesnotice/cookiesnotice.yaml',
+                'modified' => 1495987874
             ],
             'plugins/cookiespolicy' => [
                 'file' => 'user/plugins/cookiespolicy/cookiespolicy.yaml',
@@ -179,6 +187,15 @@ return [
                 'valid_formats' => [
                     0 => 'html'
                 ]
+            ],
+            'cookiesnotice' => [
+                'enabled' => false,
+                'jqcookie' => true,
+                'possition' => 'top',
+                'url' => 'http://grafikprofil.se/kakor',
+                'customcss' => false,
+                'urlcss' => 'http://example.com/assets/css/style.css',
+                'position' => 'top'
             ],
             'cookiespolicy' => [
                 'enabled' => false,

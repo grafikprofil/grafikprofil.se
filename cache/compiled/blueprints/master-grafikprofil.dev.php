@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1495987277,
-    'checksum' => 'edf9e521824c95ab11a42fbd842e59bf',
+    'timestamp' => 1495988096,
+    'checksum' => 'accc5a1e5e7bc03450846ad23bf8d351',
     'files' => [
         'system/blueprints/config' => [
             'media' => [
@@ -30,6 +30,10 @@ return [
             'plugins/cdn' => [
                 'file' => 'user/plugins/cdn/blueprints.yaml',
                 'modified' => 1495987265
+            ],
+            'plugins/cookiesnotice' => [
+                'file' => 'user/plugins/cookiesnotice/blueprints.yaml',
+                'modified' => 1495987874
             ],
             'plugins/cookiespolicy' => [
                 'file' => 'user/plugins/cookiespolicy/blueprints.yaml',
@@ -2249,6 +2253,84 @@ return [
                 'name' => 'plugins.cdn.valid_formats',
                 'validation' => 'strict'
             ],
+            'plugins.cookiesnotice' => [
+                'form' => [
+                    'validation' => 'strict'
+                ],
+                'type' => '_root',
+                'form_field' => false
+            ],
+            'plugins.cookiesnotice.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.cookiesnotice.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.cookiesnotice.jqcookie' => [
+                'type' => 'toggle',
+                'label' => 'Load jQuery Cookie',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.cookiesnotice.jqcookie',
+                'validation' => 'strict'
+            ],
+            'plugins.cookiesnotice.position' => [
+                'type' => 'select',
+                'label' => 'Position',
+                'size' => 'small',
+                'default' => 'top',
+                'options' => [
+                    'top' => 'Top',
+                    'bot' => 'Bottom'
+                ],
+                'name' => 'plugins.cookiesnotice.position',
+                'validation' => 'strict'
+            ],
+            'plugins.cookiesnotice.url' => [
+                'type' => 'text',
+                'label' => 'Policy terms',
+                'size' => 'medium',
+                'name' => 'plugins.cookiesnotice.url',
+                'validation' => 'strict'
+            ],
+            'plugins.cookiesnotice.customcss' => [
+                'type' => 'toggle',
+                'label' => 'Custom CSS',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.cookiesnotice.customcss',
+                'validation' => 'strict'
+            ],
+            'plugins.cookiesnotice.urlcss' => [
+                'type' => 'text',
+                'label' => 'Custom CSS url',
+                'size' => 'medium',
+                'name' => 'plugins.cookiesnotice.urlcss',
+                'validation' => 'strict'
+            ],
             'plugins.cookiespolicy' => [
                 'form' => [
                     'validation' => 'strict'
@@ -3576,6 +3658,14 @@ return [
                     'inline_css_replace' => 'plugins.cdn.inline_css_replace',
                     'extensions' => 'plugins.cdn.extensions',
                     'valid_formats' => 'plugins.cdn.valid_formats'
+                ],
+                'cookiesnotice' => [
+                    'enabled' => 'plugins.cookiesnotice.enabled',
+                    'jqcookie' => 'plugins.cookiesnotice.jqcookie',
+                    'position' => 'plugins.cookiesnotice.position',
+                    'url' => 'plugins.cookiesnotice.url',
+                    'customcss' => 'plugins.cookiesnotice.customcss',
+                    'urlcss' => 'plugins.cookiesnotice.urlcss'
                 ],
                 'cookiespolicy' => [
                     'enabled' => 'plugins.cookiespolicy.enabled',

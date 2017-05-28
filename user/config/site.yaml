@@ -7,7 +7,7 @@ taxonomies:
   - category
   - tag
 metadata:
-  description: 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga något nytt. Vi gör, guidar eller pekar dig åt rätt håll. Att ha en webb behöver inte vara mer komplicerat än så.'
+  description: 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga nytt. Vi bygger, designar eller guidar dig åt rätt håll. En webbplats behöver inte vara svårare än än så.'
 summary:
   enabled: true
   format: short
@@ -17,7 +17,7 @@ blog:
   route: /blog
 header:
   title: '<span>VI HJÄLPER BÅDE</span> DIG OCH DIN HEMSIDA'
-  description: 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga något nytt. Vi gör, guidar eller pekar dig åt rätt håll. Att ha en webb behöver inte vara mer komplicerat än så.'
+  description: 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga nytt. Vi bygger, designar eller guidar dig åt rätt håll. En webbplats behöver inte vara svårare än än så.'
   buttons:
     -
       text: 'Hjälp mig!'

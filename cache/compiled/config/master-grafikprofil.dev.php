@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1495791440,
-    'checksum' => '2e439f897020ff683158a8786272550f',
+    'timestamp' => 1495963065,
+    'checksum' => '7a4b911b68fa8e1e0a41d0d58f2e43e6',
     'files' => [
         'user/config' => [
             'media' => [
@@ -31,7 +31,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1495791438
+                'modified' => 1495962991
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -538,7 +538,7 @@ return [
                 1 => 'tag'
             ],
             'metadata' => [
-                'description' => 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga något nytt. Vi gör, guidar eller pekar dig åt rätt håll. Att ha en webb behöver inte vara mer komplicerat än så.'
+                'description' => 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga nytt. Vi bygger, designar eller guidar dig åt rätt håll. En webbplats behöver inte vara svårare än än så.'
             ],
             'summary' => [
                 'enabled' => true,
@@ -553,7 +553,7 @@ return [
             ],
             'header' => [
                 'title' => '<span>VI HJÄLPER BÅDE</span> DIG OCH DIN HEMSIDA',
-                'description' => 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga något nytt. Vi gör, guidar eller pekar dig åt rätt håll. Att ha en webb behöver inte vara mer komplicerat än så.',
+                'description' => 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga nytt. Vi bygger, designar eller guidar dig åt rätt håll. En webbplats behöver inte vara svårare än än så.',
                 'buttons' => [
                     0 => [
                         'text' => 'Hjälp mig!',

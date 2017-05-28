@@ -31,6 +31,13 @@ form:
           label: Ditt telefonnummer (frivilligt)
           type: text
 
+        - name: phone
+          label: Vad går du och funderar på?
+          type: textarea
+          validate:
+            required: true
+            message: 'Du måste ange ett meddelande'
+
     buttons:
         - type: submit
           value: Skicka meddelande

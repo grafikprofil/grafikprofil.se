@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/public/user/config/site.yaml',
-    'modified' => 1495790773,
+    'modified' => 1495962991,
     'data' => [
         'title' => 'Grafik & Profil',
         'default_lang' => 'sv',
@@ -15,7 +15,7 @@ return [
             1 => 'tag'
         ],
         'metadata' => [
-            'description' => 'Vi hjälper både dig och din hemsida.'
+            'description' => 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga nytt. Vi bygger, designar eller guidar dig åt rätt håll. En webbplats behöver inte vara svårare än än så.'
         ],
         'summary' => [
             'enabled' => true,
@@ -28,7 +28,7 @@ return [
         ],
         'header' => [
             'title' => '<span>VI HJÄLPER BÅDE</span> DIG OCH DIN HEMSIDA',
-            'description' => 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga något nytt. Vi gör, guidar eller pekar dig åt rätt håll. Att ha en webb behöver inte vara mer komplicerat än så.',
+            'description' => 'Byta bilder eller uppdatera text. Lägga till funktioner eller bygga nytt. Vi bygger, designar eller guidar dig åt rätt håll. En webbplats behöver inte vara svårare än än så.',
             'buttons' => [
                 0 => [
                     'text' => 'Hjälp mig!',

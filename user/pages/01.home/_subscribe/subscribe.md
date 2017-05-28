@@ -31,7 +31,7 @@ form:
           label: Ditt telefonnummer (frivilligt)
           type: text
 
-        - name: phone
+        - name: message
           label: Vad går du och funderar på?
           type: textarea
           validate:
